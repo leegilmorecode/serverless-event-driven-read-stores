@@ -1,0 +1,88 @@
+{
+  "info": {
+    "_postman_id": "0d265cc5-f173-4adb-ae3a-78734e21391a",
+    "name": "serverless read stores",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "752706"
+  },
+  "item": [
+    {
+      "name": "Create Order",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"id\": \"111\",\n    \"quantity\": \"20\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://your_rest_id.execute-api.eu-west-1.amazonaws.com/prod/orders",
+          "protocol": "https",
+          "host": [
+            "your_rest_id",
+            "execute-api",
+            "eu-west-1",
+            "amazonaws",
+            "com"
+          ],
+          "path": ["prod", "orders"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Order",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"quantity\": \"442\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://your_rest_id.execute-api.eu-west-1.amazonaws.com/prod/orders/111",
+          "protocol": "https",
+          "host": [
+            "your_rest_id",
+            "execute-api",
+            "eu-west-1",
+            "amazonaws",
+            "com"
+          ],
+          "path": ["prod", "orders", "111"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Order",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "https://your_rest_id.execute-api.eu-west-1.amazonaws.com/prod/orders/111",
+          "protocol": "https",
+          "host": [
+            "your_rest_id",
+            "execute-api",
+            "eu-west-1",
+            "amazonaws",
+            "com"
+          ],
+          "path": ["prod", "orders", "111"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
